@@ -82,7 +82,7 @@ def json_a_diccionario(json, symbol):
 def format_json(json, symbol): 
     # Se crea un DataFrame en Pandas a partir del json y se transpone para que las columnas sean los datos y las filas los días
     df = pd.DataFrame(json['Monthly Adjusted Time Series']).T
-    # Se cambian los nombres de las columnas para que no tengan enumeración
+    # Se cambian los nombres de las columnas para que no tengan enumeración 
     df.rename(columns=lambda x: x[3:], inplace=True)
     # Agregar columna index
     df['date'] = df.index
